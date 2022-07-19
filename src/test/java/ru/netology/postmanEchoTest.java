@@ -21,7 +21,7 @@ public class postmanEchoTest {
                 .then()
                 .statusCode(200)
                 //.body(/* --> ваша проверка здесь <-- */)
-                .body("data", equalTo("raw data"))
+                .body("data", equalTo("ru.netology.api.postman"))
         ;
     }
 
@@ -38,7 +38,10 @@ public class postmanEchoTest {
                 .post("/post")
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("А.С. Пушкин"))
+                .body("data", equalTo("Мой дядя самых честных правил,\n" +
+                        "Когда не в шутку занемог,\n" +
+                        "Он уважать себя заставил\n" +
+                        "И лучше выдумать не мог."))
         ;
     }
 }
